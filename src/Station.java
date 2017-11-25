@@ -2,6 +2,9 @@
  * Created by Ivor on 2017-11-25.
  */
 public class Station {
-    private int git;
+
+    public static int number;
+
+    public static String name;
 
 }
