@@ -1,6 +1,5 @@
-/**
- * Created by Ivor on 2017-11-25.
- */
+import net.datastructures.*;
+
 public class Station {
 
     public static int number;
