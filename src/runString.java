@@ -43,8 +43,7 @@ public class runString {
         }catch(IOException error){
             System.out.println("error caught");
         }
-
-
-
+        
     }//end of psvm
+
 }
