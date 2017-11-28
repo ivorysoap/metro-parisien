@@ -21,8 +21,16 @@ public class runString {
 
         try{
             String line;
+            char flag = 'F';
             while((line = metroIn.readLine()) != null)
             {
+                if(line.charAt(0) == '$'){
+                    flag = 'T';
+                    System.out.println();
+                    System.out.println("===END OF STATIONS - BEGINNING OF EDGES===");
+                    System.out.println();
+                }
+
                 System.out.println(line);
             }
             metroIn.close();
