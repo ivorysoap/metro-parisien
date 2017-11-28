@@ -30,8 +30,13 @@ public class runString {
                     System.out.println("===END OF STATIONS - BEGINNING OF EDGES===");
                     System.out.println();
                 }
-
-                System.out.println(line);
+                else{
+                    char lineFlag = 'S';
+                    char currChar;
+                    System.out.print("Station name: ");
+                    while(currChar != ' ')
+                        currChar = metroIn.read();
+                }
             }
             metroIn.close();
 
