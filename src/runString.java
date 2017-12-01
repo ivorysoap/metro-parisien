@@ -1,29 +1,36 @@
 
-import java.util.Scanner;
-import java.util.*;
-import java.io.BufferedReader;
+import com.sun.org.apache.xpath.internal.SourceTree;
+import net.datastructures.*;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.rmi.RemoteException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.io.FileNotFoundException;
 
 
 public class runString {
 
+
     public static void main(String[] args) throws FileNotFoundException {
 
         File metroFile = new File("metro.txt");
         BufferedReader metroIn = new BufferedReader(new FileReader(metroFile));
+        //int numberOfStations, numberOfConnections;
+        SinglyLinkedList<Connection>[] adjacencyList;
 
         try{
+
             String line;
             //Get the number of stations and connections from line 0 of the file
             String[] firstLine = metroIn.readLine().split(" ");
             System.out.println("This map contains " + firstLine[0] + " stations connected by " + firstLine[1] + " paths.");
+
+
+
+            int numberOfStations = Integer.parseInt(firstLine[0]);
+            int numberOfConnections = Integer.parseInt(firstLine[1]);
+
             //Now, parse the entire file.  Parsing for stations when flag=='F' and parsing for connections when flag=='T'.
             char flag = 'F';
             while((line = metroIn.readLine()) != null)
@@ -35,13 +42,7 @@ public class runString {
                     System.out.println();
                 }
                 else{
-<<<<<<< HEAD
                     char lineFlag = 'S';
-                    char currChar;
-                    System.out.print("Station name: ");
-                    //while(currChar != ' ')
-                        //currChar = metroIn.read();
-=======
                     if(flag == 'F') {
                         //If treating a station, print the station's info.
                         String[] lineComponents = line.split(" ", 2);
@@ -55,8 +56,6 @@ public class runString {
                         else
                             System.out.println("Station #" + lineComponents[0] + " is connected to station # " + lineComponents[1] + ", and the distance is walkable.");
                     }
-
->>>>>>> 6ccd753ab508d3295cf59bd6dab87af1534c15ed
                 }
             }
             System.out.println("EOF");
@@ -66,6 +65,6 @@ public class runString {
             System.out.println("error caught");
         }
         
-    }//end of psvm
+    }
 
 }

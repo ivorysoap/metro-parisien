@@ -1,12 +1,12 @@
 
 
-public class Station {
+public class Station{
 
     private int number;
 
     private String name;
 
-    private boolean explored;
+    private boolean explored, disabled;
 
     //Constructor
     public Station(){
