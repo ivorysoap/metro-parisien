@@ -34,8 +34,8 @@ public class runString {
                     char lineFlag = 'S';
                     char currChar;
                     System.out.print("Station name: ");
-                    while(currChar != ' ')
-                        currChar = metroIn.read();
+                    //while(currChar != ' ')
+                        //currChar = metroIn.read();
                 }
             }
             metroIn.close();

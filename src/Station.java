@@ -2,21 +2,53 @@
 
 public class Station {
 
-    private static int number;
+    private int number;
 
-    private static String name;
+    private String name;
+
+    private boolean explored;
+
+    //Constructor
+    public Station(){
+        this.number = -1;
+        this.name=null;
+        this.explored=false;
+    }
 
     public Station(int number, String name){
         this.number = number;
         this.name = name;
+        this.explored = false;
     }
 
-    public void setNumber(int newNumber){ number = newNumber; }
+    //End of Constructors///
 
-    public int getNumber(){ return number; }
+    //Getters
+    public int getNumber() {
+        return number;
+    }
 
-    public void setName(String newName){ name = newName; }
+    public String getName(){
+        return name;
+    }
 
-    public String getName(){ return name; }
+    public boolean isExplored() {
+        return explored;
+    }
 
-}
+    //Setters
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setExplored(boolean explored) {
+        this.explored = explored;
+    }
+
+    public void setNumber(int number){
+        this.number = number;
+    }
+
+
+
+}//End of class
