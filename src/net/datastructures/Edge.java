@@ -26,7 +26,6 @@ import java.util.Hashtable;
 
 /**
  * An edge of a graph.
- *
  * @author Michael T. Goodrich
  * @author Roberto Tamassia
  * @author Michael H. Goldwasser

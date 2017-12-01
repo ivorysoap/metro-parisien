@@ -1,7 +1,7 @@
 public class Connection {
 
     Station station1, station2;
-
+    int connectionId;
     int traversalTime;
 
     boolean discovered, disabled;
