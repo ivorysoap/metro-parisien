@@ -35,13 +35,11 @@ public class runString {
                     System.out.println();
                 }
                 else{
-<<<<<<< HEAD
                     char lineFlag = 'S';
                     char currChar;
                     System.out.print("Station name: ");
                     //while(currChar != ' ')
                         //currChar = metroIn.read();
-=======
                     if(flag == 'F') {
                         //If treating a station, print the station's info.
                         String[] lineComponents = line.split(" ", 2);
@@ -55,8 +53,6 @@ public class runString {
                         else
                             System.out.println("Station #" + lineComponents[0] + " is connected to station # " + lineComponents[1] + ", and the distance is walkable.");
                     }
-
->>>>>>> 6ccd753ab508d3295cf59bd6dab87af1534c15ed
                 }
             }
             System.out.println("EOF");

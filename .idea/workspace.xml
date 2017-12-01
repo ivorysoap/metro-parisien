@@ -4,93 +4,9 @@
     <list default="true" id="80531f81-5f0e-48d4-a276-26968213b899" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/Edges.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/Node.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/Station.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AVLTreeMap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AbstractBinaryTree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AbstractHashMap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AbstractMap$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AbstractMap$KeyIterable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AbstractMap$KeyIterator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AbstractMap$MapEntry.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AbstractMap$ValueIterable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AbstractMap$ValueIterator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AbstractMap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AbstractPriorityQueue$PQEntry.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AbstractPriorityQueue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AbstractSortedMap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AbstractTree$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AbstractTree$ElementIterator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AbstractTree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AdaptablePriorityQueue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AdjacencyMapGraph$InnerEdge.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AdjacencyMapGraph$InnerVertex.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/AdjacencyMapGraph.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/ArrayList$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/ArrayList$ArrayIterator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/ArrayList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/ArrayQueue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/ArrayStack.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/BinaryTree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/ChainHashMap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/CircularQueue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/CircularlyLinkedList$Node.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/CircularlyLinkedList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/DefaultComparator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/Deque.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/DoublyLinkedList$Node.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/DoublyLinkedList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/Edge.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/Entry.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/Graph.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/GraphAlgorithms.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/GraphExamples.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/HeapAdaptablePriorityQueue$AdaptablePQEntry.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/HeapAdaptablePriorityQueue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/HeapPriorityQueue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/LinkedBinaryTree$Node.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/LinkedBinaryTree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/LinkedCircularQueue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/LinkedPositionalList$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/LinkedPositionalList$ElementIterator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/LinkedPositionalList$Node.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/LinkedPositionalList$PositionIterable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/LinkedPositionalList$PositionIterator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/LinkedPositionalList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/LinkedQueue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/LinkedStack.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/List.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/Map.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/Partition$Locator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/Partition.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/Position.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/PositionalList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/PriorityQueue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/ProbeHashMap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/Queue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/RBTreeMap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/SinglyLinkedList$Node.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/SinglyLinkedList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/SortedMap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/SortedPriorityQueue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/SortedTableMap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/SplayTreeMap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/Stack.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/Tree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/TreeMap$BalanceableBinaryTree$BSTNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/TreeMap$BalanceableBinaryTree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/TreeMap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/UnsortedPriorityQueue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/UnsortedTableMap$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/UnsortedTableMap$EntryIterable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/UnsortedTableMap$EntryIterator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/UnsortedTableMap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/net/datastructures/Vertex.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/metro-parisien/runString.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Edges.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Node.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/metro-parisien/Station.class" afterPath="$PROJECT_DIR$/out/production/metro-parisien/Station.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/metro-parisien/runString.class" afterPath="$PROJECT_DIR$/out/production/metro-parisien/runString.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metro-parisien.iml" afterPath="$PROJECT_DIR$/metro-parisien.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Station.java" afterPath="$PROJECT_DIR$/src/Station.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/runString.java" afterPath="$PROJECT_DIR$/src/runString.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -102,7 +18,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="runString.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/runString.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="28" column="54" lean-forward="true" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -124,12 +53,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/Vertex.java" />
         <option value="$PROJECT_DIR$/src/Station.java" />
-        <option value="$PROJECT_DIR$/src/runString.java" />
         <option value="$PROJECT_DIR$/src/Node.java" />
         <option value="$PROJECT_DIR$/src/DLinkedList.java" />
         <option value="$PROJECT_DIR$/src/net/datastructures/CircularlyLinkedList.java" />
         <option value="$PROJECT_DIR$/src/Edges.java" />
         <option value="$PROJECT_DIR$/src/net/datastructures/LinkedCircularQueue.java" />
+        <option value="$PROJECT_DIR$/src/runString.java" />
       </list>
     </option>
   </component>
@@ -345,8 +274,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -363,8 +291,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -505,7 +434,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="23" width="1920" height="945" extended-state="6" />
+    <frame x="1280" y="23" width="1920" height="945" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -515,13 +444,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50254667" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.058419243" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1640625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -533,6 +461,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -553,19 +482,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/datastructures/CircularlyLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/datastructures/CircularlyLinkedList.java" />
     <entry file="file://$PROJECT_DIR$/src/net/datastructures/AdjacencyMapGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1995">
           <caret line="165" column="48" lean-forward="true" selection-start-line="165" selection-start-column="48" selection-end-line="165" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -573,7 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="43" column="52" lean-forward="false" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -588,14 +508,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Node.java" />
-    <entry file="file://$PROJECT_DIR$/src/Edges.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Edges.java" />
     <entry file="file://$PROJECT_DIR$/src/Station.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -622,14 +535,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Edges.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Edges.java" />
     <entry file="file://$PROJECT_DIR$/src/runString.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -708,23 +614,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1995">
           <caret line="165" column="48" lean-forward="false" selection-start-line="165" selection-start-column="48" selection-end-line="165" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/datastructures/CircularlyLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/datastructures/CircularlyLinkedList.java" />
     <entry file="file://$PROJECT_DIR$/src/net/datastructures/GraphExamples.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="43" column="52" lean-forward="false" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -732,30 +629,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Edges.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/datastructures/LinkedCircularQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Edges.java" />
+    <entry file="file://$PROJECT_DIR$/src/net/datastructures/LinkedCircularQueue.java" />
     <entry file="file://$PROJECT_DIR$/src/runString.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+        <state relative-caret-position="179">
+          <caret line="28" column="54" lean-forward="true" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
