@@ -2,6 +2,7 @@
 
 import net.datastructures.*;
 
+import javax.xml.ws.handler.soap.SOAPHandler;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -22,14 +23,18 @@ public class runString {
         try{
 
             String line;
+            String s;
             //Get the number of stations and connections from line 0 of the file
             String[] firstLine = metroIn.readLine().split(" ");
+            StringBuilder sb = new StringBuilder(firstLine[0]);
+            sb.deleteCharAt(0);
+            s = sb.toString();
             System.out.println("This map contains " + firstLine[0] + " stations connected by " + firstLine[1] + " paths.");
 
-
-
-            int numberOfStations = Integer.parseInt(firstLine[0]);
+            int numberOfStations = Integer.parseInt(s);
             int numberOfConnections = Integer.parseInt(firstLine[1]);
+
+
 
             //Now, parse the entire file.  Parsing for stations when flag=='F' and parsing for connections when flag=='T'.
             char flag = 'F';

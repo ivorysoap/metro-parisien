@@ -219,4 +219,25 @@ public class SinglyLinkedList<E> implements Cloneable {
     sb.append(")");
     return sb.toString();
   }
+
+  /**
+   * Search method to return when element is found
+   *
+   */
+
+  // search if a given integer is in the array
+
+  //TODO : add the comparable element
+  public boolean search(int value) {
+
+    Node n= head.next;
+
+    while (n!=head)n= n.next;
+
+    if (n==head)
+      return false;
+    else
+      return true;
+  }
+
 }
