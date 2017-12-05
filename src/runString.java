@@ -15,7 +15,7 @@ public class runString {
 private static int numberOfStations, numberOfConnections;
 
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException, IllegalArgumentException {
 
         File metroFile = new File("metro.txt");
         BufferedReader metroIn = new BufferedReader(new FileReader(metroFile));
@@ -57,6 +57,8 @@ private static int numberOfStations, numberOfConnections;
                         //Evaluating a STATION (flag=='F')
                         String[] lineComponents = line.split(" ", 2);
                         System.out.println("Station number: " + lineComponents[0] + " / Station name: " + lineComponents[1]);
+                        int stationNumber = Integer.parseInt(lineComponents[0]);
+                        metro.addStation(stationNumber, new Station(stationNumber, lineComponents[1])); //add the current station to the SinglyLinkedList of stations
                     }
                     else if(flag == 'T'){
                         //Evaluating a CONNECTION (flag=='T')
@@ -91,11 +93,32 @@ private static int numberOfStations, numberOfConnections;
             System.out.println("error caught");
         }
 
+        //Parse arguments as integers, and put them in their own array.
+        int[] arguments = new int[args.length];
+        for (int i = 0; i < args.length; i++)
+            arguments[i] = Integer.parseInt(args[i]);
+
+        //Evaluate the (integer) arguments and call the appropriate method depending on how many were passed.
+        switch(arguments.length){
+
+            case 1 :    Metro.listLine(arguments[0]); //Function I: List a station's line
+                        break;
+            case 2 :    Metro.quickestPath(arguments[0], arguments[1]); //Function II: List the shortest distance between two stations
+                        break;
+            case 3 :    Metro.quickestPath(arguments[0], arguments[1], arguments[2]); //Function III: List the shortest distance between two stations considering a closed line
+                        break;
+            default:    throw new IllegalArgumentException("You must enter 1, 2, or 3 integer parameters, separated by spaces.");
+
+        }
+
 
 
 
 
         
     }
+
+
+
 
 }

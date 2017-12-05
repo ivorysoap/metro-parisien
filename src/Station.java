@@ -8,7 +8,7 @@ public class Station{
 
     private boolean explored, disabled;
 
-    //Constructor
+    //Empty Constructor
     public Station(){
         this.number = -1;
         this.name=null;
@@ -32,7 +32,7 @@ public class Station{
         return name;
     }
 
-    public boolean isExplored() {
+    public boolean getExplored() {
         return explored;
     }
 
