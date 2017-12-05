@@ -1,12 +1,10 @@
 public class Connection {
 
-    Station station1, station2;
-    int connectionId;
-    int traversalTime;
+    int station1, station2, connectionId, traversalTime;
 
     boolean discovered, disabled;
 
-    public Connection(Station station1, Station station2, int traversalTime){
+    public Connection(int station1, int station2, int traversalTime){
         this.station1 = station1;
         this.station2 = station2;
         this.traversalTime = traversalTime;
@@ -14,19 +12,19 @@ public class Connection {
         this.disabled = false;
     }
 
-    public Station getStation1() {
+    public int getStation1() {
         return station1;
     }
 
-    public void setStation1(Station station1) {
+    public void setStation1(int station1) {
         this.station1 = station1;
     }
 
-    public Station getStation2() {
+    public int getStation2() {
         return station2;
     }
 
-    public void setStation2(Station station2) {
+    public void setStation2(int station2) {
         this.station2 = station2;
     }
 
@@ -53,4 +51,7 @@ public class Connection {
     public void setDisabled(boolean disabled) {
         this.disabled = disabled;
     }
+
+    @Override
+    public String toString(){ return station1 + " " + station2 + " " + traversalTime; }
 }

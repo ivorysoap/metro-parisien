@@ -12,13 +12,13 @@ import java.io.FileNotFoundException;
 
 public class runString {
 
+private static int numberOfStations, numberOfConnections;
+
 
     public static void main(String[] args) throws FileNotFoundException {
 
         File metroFile = new File("metro.txt");
         BufferedReader metroIn = new BufferedReader(new FileReader(metroFile));
-        //int numberOfStations, numberOfConnections;
-        SinglyLinkedList<Connection>[] adjacencyList;
 
         try{
 
@@ -31,15 +31,18 @@ public class runString {
             s = sb.toString();
             System.out.println("This map contains " + firstLine[0] + " stations connected by " + firstLine[1] + " paths.");
 
-            int numberOfStations = Integer.parseInt(s);
-            int numberOfConnections = Integer.parseInt(firstLine[1]);
+            numberOfStations = Integer.parseInt(s);  //parse first number in file to get number of stations
+            numberOfConnections = Integer.parseInt(firstLine[1]); //parse second number in file to get number of stations
 
-
+            //Declare graph
+            Metro metro = new Metro(numberOfStations);
 
             //Now, parse the entire file.  Parsing for stations when flag=='F' and parsing for connections when flag=='T'.
             char flag = 'F';
             while((line = metroIn.readLine()) != null)
             {
+                //Set flag to 'T' once the BufferedReader hits the line containing only the character '$'.
+                //This signals the end of the section specifying the stations and the beginning of the section specifying the connections.
                 if(line.charAt(0) == '$'){
                     flag = 'T';
                     System.out.println();
@@ -47,28 +50,51 @@ public class runString {
                     System.out.println();
                 }
                 else{
-                    char lineFlag = 'S';
+
+                    int i = 0; //index
+
                     if(flag == 'F') {
-                        //If treating a station, print the station's info.
+                        //Evaluating a STATION (flag=='F')
                         String[] lineComponents = line.split(" ", 2);
                         System.out.println("Station number: " + lineComponents[0] + " / Station name: " + lineComponents[1]);
                     }
                     else if(flag == 'T'){
-                        //If treating a connection, print the connection's info.
+                        //Evaluating a CONNECTION (flag=='T')
                         String[] lineComponents = line.split(" ", 3);
-                        if(Integer.valueOf(lineComponents[2]) != -1)
+                        metro.addConnection(Integer.parseInt(lineComponents[0]), Integer.parseInt(lineComponents[1]), Integer.parseInt(lineComponents[2]));  //adding all the connections to the graph
+                        if(Integer.valueOf(lineComponents[2]) != -1) {
                             System.out.println("Station #" + lineComponents[0] + " is connected to station # " + lineComponents[1] + ", and it takes " + lineComponents[2] + "s to cover that distance.");
-                        else
+
+                        }
+                        else {
                             System.out.println("Station #" + lineComponents[0] + " is connected to station # " + lineComponents[1] + ", and the distance is walkable.");
+                        }
                     }
                 }
             }
             System.out.println("EOF");
             metroIn.close();
 
+            System.out.println("");
+            System.out.println("");
+            System.out.println("+++++++++++++++++++");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("Visual representation of the graph (adjacency list) :");
+            System.out.println("");
+
+            for (int i = 0; i < numberOfStations; i++) {
+                System.out.println("<STATION " + i + ">  ----  " + metro.adjacencyList[i]);
+            }
+
         }catch(IOException error){
             System.out.println("error caught");
         }
+
+
+
+
+
         
     }
 

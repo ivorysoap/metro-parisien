@@ -49,6 +49,9 @@ public class Station{
         this.number = number;
     }
 
+    @Override
+    public String toString(){ return number + " " + name; }
+
 
 
 }//End of class
