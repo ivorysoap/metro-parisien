@@ -51,14 +51,16 @@ public class Metro{
      */
     public static void listLine(int a){
 
+
+
                 stations[a].setExplored(true);
+
+                System.out.println(stations[a].toString());
 
                 for(Connection c : adjacencyList[a]){
 
 
                     if(!stations[c.getStation2()].getExplored() && c.getTraversalTime() != -1){
-
-                            System.out.println(stations[a].toString());
 
                             listLine(c.getStation2());
 

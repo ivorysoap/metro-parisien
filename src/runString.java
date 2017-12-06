@@ -84,7 +84,7 @@ private static int numberOfStations, numberOfConnections;
                 System.out.println("<STATION " + i + ">  ----  " + metro.adjacencyList[i]);
             }
 
-            metro.listLine(284);
+            metro.listLine(320);
 
         }catch(IOException error){
             System.out.println("error caught");
