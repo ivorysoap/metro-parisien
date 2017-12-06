@@ -104,7 +104,79 @@ public class Metro{
      * Finds the quickest path between a and b using Dijkstra's Algorithm
      * @param a, b  two stations between which the shortest path will be found
      */
-    public static void quickestPath(int a, int b){}
+    public static void quickestPath(int a, int b){
+
+        int currentTime=0;
+        int cumulativeTime=0;
+        int stops=0;
+        int nextStation=a;
+
+        while(nextStation != b){//While destination not reached
+
+            for(Connection c: adjacencyList[nextStation]){
+
+                //this needs to improve
+                //At first step the currenttime is set to the max integer so that first value is smaller than it
+                if(stops<=0){
+
+                    currentTime=Integer.MAX_VALUE;
+
+                    if(currentTime > getShortestDistance(c)) {
+
+                        currentTime = getShortestDistance(c);
+                        nextStation = c.getStation2();
+                        stops++;
+
+                    }
+
+                }
+
+                //after the first stop, we need to cumulate the time spent traveling
+                if(cumulativeTime > getShortestDistance(c) && stops>0){
+
+                    currentTime = getShortestDistance(c);
+                    nextStation = c.getStation2();
+                    stops++;
+
+                }
+
+
+
+            }//End of for
+
+            cumulativeTime += currentTime;//Change the cumulated time //iterate
+
+        }// End of While
+
+        System.out.println("The number of Stops : "+stops);
+        System.out.println("It would take this much time : " +cumulativeTime+ " to go from Station #" +a+ "to #" +b);
+        System.out.println("Final Destination is the following: " +nextStation);
+
+    }
+
+    public static void position(int a, int currentTime, int nextStation){
+
+
+
+    }
+
+    /**
+     * Returns the correct time it takes to go from one station to the other
+     * If the distance is walkable then the time it takes is 90 seconds
+     * @param con - connection to test
+     */
+
+    public static int getShortestDistance(Connection con){
+
+        int distance = con.getTraversalTime();
+
+        if(distance == -1 ){
+            return 90; //if walkable then take s90 seconds --enoncé
+        }else{
+            return distance;
+        }
+
+    }
 
     /**
      * Finds the quickest path between a and b using Dijkstra's Algorithm, considering that one line
