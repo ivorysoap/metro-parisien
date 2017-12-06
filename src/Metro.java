@@ -1,9 +1,8 @@
-import net.datastructures.Graph;
-import net.datastructures.SinglyLinkedList;
+import java.util.LinkedList;
 
 public class Metro{
 
-    static SinglyLinkedList<Connection>[] adjacencyList;
+    static LinkedList<Connection>[] adjacencyList;
     static Station[] stations;
 
     public Metro(int numberOfStations){
@@ -12,9 +11,9 @@ public class Metro{
         stations = new Station[numberOfStations];
 
         //Initialize an array of SinglyLinedLists and fill it with empty SinglyLinkedLists.  This constitutes the adjacency list.
-        adjacencyList = new SinglyLinkedList[numberOfStations];
+        adjacencyList = new LinkedList[numberOfStations];
         for (int i = 0; i < adjacencyList.length; i++)
-            adjacencyList[i] = new SinglyLinkedList<Connection>();
+            adjacencyList[i] = new LinkedList<Connection>();
     }
 
 
@@ -35,9 +34,9 @@ public class Metro{
      * @param a, b  stations to be checked
      * @return      a boolean verifying if a and b are connected
      */
-    //TODO: SinglyLinkedList's search() method has to be implented for this to work!
+    //TODO: Broken
     public boolean isConnected(int a, int b){
-        return adjacencyList[a].search(b);
+        return adjacencyList[a].contains(b);
     }
 
 
@@ -52,23 +51,22 @@ public class Metro{
      */
     public static void listLine(int a){
 
-        //TODO fix everything commented out here
-        /*
-
-            if(adjacencyList[a].size() == 1){  //if station a has only one connection (is an extremity station)
-
                 stations[a].setExplored(true);
 
-                if(!stations[adjacencyList[a].first().station2].getExplored() && adjacencyList[a].first().traversalTime != -1){
+                for(Connection c : adjacencyList[a]){
 
-                }
-                else if(!stations[adjacencyList[a].first().getNext().station2].getExplored() && adjacencyList[a].first().traversalTime != -1)
 
-            }
+                    if(!stations[c.getStation2()].getExplored() && c.getTraversalTime() != -1){
 
-            */
+                            System.out.println(stations[a].toString());
 
-    }
+                            listLine(c.getStation2());
+
+
+                    }//end of if
+                }//endoffor
+
+    }//end of listline
 
 
     /**

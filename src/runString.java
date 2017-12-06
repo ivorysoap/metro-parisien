@@ -1,8 +1,3 @@
-
-
-import net.datastructures.*;
-
-import javax.xml.ws.handler.soap.SOAPHandler;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -89,9 +84,13 @@ private static int numberOfStations, numberOfConnections;
                 System.out.println("<STATION " + i + ">  ----  " + metro.adjacencyList[i]);
             }
 
+            metro.listLine(284);
+
         }catch(IOException error){
             System.out.println("error caught");
         }
+
+
 
         //Parse arguments as integers, and put them in their own array.
         int[] arguments = new int[args.length];
