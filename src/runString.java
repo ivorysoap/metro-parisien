@@ -84,7 +84,7 @@ private static int numberOfStations, numberOfConnections;
                 System.out.println("<STATION " + i + ">  ----  " + metro.adjacencyList[i]);
             }
 
-            metro.listLine(320);
+            //metro.listLine(283);
 
         }catch(IOException error){
             System.out.println("error caught");
@@ -100,6 +100,8 @@ private static int numberOfStations, numberOfConnections;
         //Evaluate the (integer) arguments and call the appropriate method depending on how many were passed.
         switch(arguments.length){
 
+            case 0 :    System.out.println("Warning: no parameters passed!  You must pass 1, 2, or 3 parameters in order to select a function.  Please refer to README.txt. ");
+                        break;
             case 1 :    Metro.listLine(arguments[0]); //Function I: List a station's line
                         break;
             case 2 :    Metro.quickestPath(arguments[0], arguments[1]); //Function II: List the shortest distance between two stations

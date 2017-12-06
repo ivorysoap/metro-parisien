@@ -4,6 +4,15 @@ public class Connection {
 
     boolean discovered, disabled;
 
+    //Empty constructor
+    public Connection(){
+        this.station1 = -1;
+        this.station2 = -1;
+        this.traversalTime = -1;
+        this.discovered = false;
+        this.disabled = false;
+    }
+
     public Connection(int station1, int station2, int traversalTime){
         this.station1 = station1;
         this.station2 = station2;

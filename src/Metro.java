@@ -51,24 +51,53 @@ public class Metro{
      */
     public static void listLine(int a){
 
-
-
+        if(adjacencyList[a].size() == 1) {
+            listLineRecursive(a);
+        }
+        else{
+            Connection nextConnection = new Connection();
+            while(adjacencyList[a].size() != 1){
+                char flag = 'F';
                 stations[a].setExplored(true);
-
-                System.out.println(stations[a].toString());
-
                 for(Connection c : adjacencyList[a]){
+                    if(!stations[c.getStation2()].getExplored() && c.getTraversalTime() != -1) {
+                        nextConnection = c;
+                        flag = 'T';
+                        break;
+                    }
+                }
+
+                if(flag == 'F')
+                    break;
+                a = nextConnection.getStation2();
+            }
+            for(Station s : stations)
+                s.setExplored(false);
+            listLineRecursive(a);
+        }
 
 
-                    if(!stations[c.getStation2()].getExplored() && c.getTraversalTime() != -1){
-
-                            listLine(c.getStation2());
-
-
-                    }//end of if
-                }//endoffor
 
     }//end of listline
+
+    public static void listLineRecursive(int a){
+
+        stations[a].setExplored(true);
+
+        System.out.println(stations[a].toString());
+
+        for(Connection c : adjacencyList[a]){
+
+
+            if(!stations[c.getStation2()].getExplored() && c.getTraversalTime() != -1){
+
+                listLineRecursive(c.getStation2());
+
+
+            }
+        }
+
+    }
 
 
     /**
