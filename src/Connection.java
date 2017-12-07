@@ -1,3 +1,12 @@
+/**
+ * The class Connection represents a subway connection - treated as an edge.
+ *
+ * @author Ivor Benderavage
+ * @author Hussein Hegazy
+ *
+ * CSI2510 Devoir #4
+ */
+
 public class Connection {
 
     int station1, station2, connectionId, traversalTime;

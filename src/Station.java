@@ -1,4 +1,11 @@
-
+/**
+ * The class Station represents a metro station - treated as a vertex.
+ *
+ * @author Ivor Benderavage
+ * @author Hussein Hegazy
+ *
+ * CSI2510 Devoir #4
+ */
 
 public class Station{
 

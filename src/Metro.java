@@ -1,3 +1,12 @@
+/**
+ * The class Metro represents the graph.  It contains the necessary methods for functions I, II, and III.
+ *
+ * @author Ivor Benderavage
+ * @author Hussein Hegazy
+ *
+ * CSI2510 Devoir #4
+ */
+
 import java.util.*;
 
 public class Metro{
@@ -22,6 +31,10 @@ public class Metro{
             DjList[i] = new LinkedList<Connection>();
     }
 
+    /**
+     * Adds a station at the specified index.
+     * @param index, station
+     */
     public void addStation(int index, Station station) { stations[index] = station; }
 
     /**
@@ -39,7 +52,6 @@ public class Metro{
      * @param a, b  stations to be checked
      * @return      a boolean verifying if a and b are connected
      */
-    //TODO: Broken
     public static boolean isConnected(int a, int b){
         return adjacencyList[a].contains(b);
     }
@@ -83,9 +95,13 @@ public class Metro{
 
 
 
-    }//end of listline
+    }
 
-    public static void listLineRecursive(int a){
+    /**
+     * Recursive helper method to listLine.
+     * @param a   the station whose line will be listed
+     */
+    private static void listLineRecursive(int a){
 
         stations[a].setExplored(true);
 
