@@ -85,7 +85,7 @@ private static int numberOfStations, numberOfConnections;
             }
 
             //metro.listLine(279);
-            metro.quickestPath(279,233);
+            metro.quickestPath(143,142);
 
         }catch(IOException error){
             System.out.println("error caught");

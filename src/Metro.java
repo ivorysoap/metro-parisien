@@ -1,12 +1,14 @@
-import java.util.LinkedList;
+import java.util.*;
 
 public class Metro{
 
     static LinkedList<Connection>[] adjacencyList;
+    static LinkedList<Connection>[] DjList;
     static Station[] stations;
+    static int numofStations;
 
     public Metro(int numberOfStations){
-
+        numofStations=numberOfStations;
         //Initialize the array representing the set of stations.  This serves as a mapping between station numbers and station names
         stations = new Station[numberOfStations];
 
@@ -14,8 +16,11 @@ public class Metro{
         adjacencyList = new LinkedList[numberOfStations];
         for (int i = 0; i < adjacencyList.length; i++)
             adjacencyList[i] = new LinkedList<Connection>();
-    }
 
+        DjList = new LinkedList[numberOfStations];
+        for (int i = 0; i < adjacencyList.length; i++)
+            DjList[i] = new LinkedList<Connection>();
+    }
 
     public void addStation(int index, Station station) { stations[index] = station; }
 
@@ -35,7 +40,7 @@ public class Metro{
      * @return      a boolean verifying if a and b are connected
      */
     //TODO: Broken
-    public boolean isConnected(int a, int b){
+    public static boolean isConnected(int a, int b){
         return adjacencyList[a].contains(b);
     }
 
@@ -106,59 +111,46 @@ public class Metro{
      */
     public static void quickestPath(int a, int b){
 
+        int startStation = a;
+        int endStation = b;
+        int[] newPosition= null;
+
+
         int currentTime=0;
-        int cumulativeTime=0;
-        int stops=0;
-        int nextStation=a;
 
-        while(nextStation != b){//While destination not reached
+            for(Connection c : adjacencyList[startStation]){
 
-            for(Connection c: adjacencyList[nextStation]){
+                stations[c.getStation1()].setExplored(true);
+                newPosition = getShortestDistance(startStation,currentTime);
+                currentTime = newPosition[0];//iterate time
+                endStation = newPosition[1];//go to next station
+                DjList[startStation].addLast(new Connection(startStation,endStation,currentTime));
+                startStation=endStation;
 
-                //this needs to improve
-                //At first step the currenttime is set to the max integer so that first value is smaller than it
-                if(stops<=0){
+            }//end of second for loop
 
-                    currentTime=Integer.MAX_VALUE;
 
-                    if(currentTime > getShortestDistance(c)) {
+        startStation=b;
 
-                        currentTime = getShortestDistance(c);
-                        nextStation = c.getStation2();
-                        stops++;
-
-                    }
-
+            for (Connection c: adjacencyList[startStation]) {
+                if(c.getStation1() ==startStation && c.getStation2()==endStation){
+                    currentTime+=c.getTraversalTime();
                 }
-
-                //after the first stop, we need to cumulate the time spent traveling
-                if(cumulativeTime > getShortestDistance(c) && stops>0){
-
-                    currentTime = getShortestDistance(c);
-                    nextStation = c.getStation2();
-                    stops++;
-
-                }
+            }
 
 
+        DjList[startStation].addLast(new Connection(startStation,endStation,currentTime));
 
-            }//End of for
 
-            cumulativeTime += currentTime;//Change the cumulated time //iterate
-
-        }// End of While
-
-        System.out.println("The number of Stops : "+stops);
-        System.out.println("It would take this much time : " +cumulativeTime+ " to go from Station #" +a+ "to #" +b);
-        System.out.println("Final Destination is the following: " +nextStation);
-
-    }
-
-    public static void position(int a, int currentTime, int nextStation){
+        System.out.print(endStation);
+        for (int i = 0; i < DjList.length; i++) {
+            System.out.println("<STATION " + i + ">  ----  " + DjList[i]);
+        }
 
 
 
     }
+
 
     /**
      * Returns the correct time it takes to go from one station to the other
@@ -166,15 +158,29 @@ public class Metro{
      * @param con - connection to test
      */
 
-    public static int getShortestDistance(Connection con){
+    public static int[] getShortestDistance(int index, int currentTime){
 
-        int distance = con.getTraversalTime();
+        int distance = Integer.MAX_VALUE;
+        int station=0;
 
-        if(distance == -1 ){
-            return 90; //if walkable then take s90 seconds --enoncé
-        }else{
-            return distance;
+        for(Connection con : adjacencyList[index]){
+
+            if(con.getTraversalTime() < distance && con.getTraversalTime()!=-1){
+
+                distance = con.getTraversalTime();
+                station = con.getStation2();//found shortest distance to reach the second station
+
+            }else{
+                distance = 90;
+                station=con.getStation2();
+            }
+
         }
+
+        int[] result = {distance+currentTime,station};
+
+        return result;
+
 
     }
 
