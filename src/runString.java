@@ -59,7 +59,6 @@ private static int numberOfStations, numberOfConnections;
                         //Evaluating a CONNECTION (flag=='T')
                         String[] lineComponents = line.split(" ", 3);
                         int inputTime = Integer.parseInt(lineComponents[2]);
-
                         metro.addConnection(Integer.parseInt(lineComponents[0]), Integer.parseInt(lineComponents[1]), inputTime); //adding all the connections to the graph
                         if(Integer.valueOf(lineComponents[2]) != -1) {
                             System.out.println("Station #" + lineComponents[0] + " is connected to station # " + lineComponents[1] + ", and it takes " + lineComponents[2] + "s to cover that distance.");
@@ -86,7 +85,8 @@ private static int numberOfStations, numberOfConnections;
                 System.out.println("<STATION " + i + ">  ----  " + metro.adjacencyList[i]);
             }
 
-            //metro.listLine(279);
+            //TESTING THE METHODS
+            metro.listLine(279);
             metro.quickestPath(116,279);
 
         }catch(IOException error){

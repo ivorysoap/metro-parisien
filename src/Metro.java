@@ -111,15 +111,20 @@ public class Metro{
      */
     public static void quickestPath(int a, int b){
 
-        int startStation = a;
-        int endStation = b;
-        int[] newPosition= null;
-        boolean finished=false;
+        int startStation = a;//start
+        int endStation = b;//end
+        int[] newPosition= null;//array of results
+        boolean finished=false;//boolean to check if it was finished
 
         int currentTime=0;
 
+        //for loop that gois through the adjancency
         for(Connection c : adjacencyList[b]){
 
+            //if the two station are already connect
+            //either overlapping or one stop away
+            //it will switch boolean to finished
+            //and make sure that if it's walkable that the distance is 90
             if(c.getStation2()==b && c.getStation1()==a){
                 System.out.println("connected");
                 finished=true;
@@ -131,40 +136,49 @@ public class Metro{
 
         }
 
+        //aslong as the it's not finished
+        //go through the list
+        //trying to form dijstra's track
         if(!finished){
+
             for(Connection c : adjacencyList[startStation]){
 
                 stations[c.getStation1()].setExplored(true);
-                newPosition = getShortestDistance(startStation, currentTime);
+                newPosition = getShortestDistance(startStation, currentTime);//call to get shortest distance depending
+                //on the traveling distance previously inputted
                 currentTime = newPosition[0];//iterate time
-                endStation = newPosition[1];//go to next station
+
+                if(!stations[newPosition[1]].getDisabled()) {
+                    endStation = newPosition[1];//go to next station
+                }
+
                 DjList[startStation].addLast(new Connection(startStation, endStation, currentTime));
                 startStation = endStation;
 
             }
         }
 
-
-
-            startStation=b;
+            endStation=b;//once it's reached the final stop
+        //you need to put final stop with final time
 
             if(finished){
-                endStation=a;
+                endStation=a;//if finished endStation
             }
 
+            //add in the currentTime left
             for (Connection c: adjacencyList[startStation]) {
                 if(c.getStation1() ==startStation && c.getStation2()==endStation){
                     currentTime+=c.getTraversalTime();
                 }
             }
 
-
-            DjList[startStation].addLast(new Connection(startStation,endStation,currentTime));
+            DjList[endStation].addLast(new Connection(endStation,startStation,currentTime));
 
         System.out.print(endStation);
-        for (int i = 0; i < DjList.length; i++) {
-            System.out.println("<STATION " + i + ">  ----  " + DjList[i]);
-        }
+        //for (int i = 0; i < DjList.length; i++) {
+            System.out.println("------------------------LAST DIJSKTRA----------------");
+            System.out.println("<STATION " + endStation + ">  ----  " + DjList[endStation]);
+        //}
 
 
 
@@ -174,7 +188,10 @@ public class Metro{
     /**
      * Returns the correct time it takes to go from one station to the other
      * If the distance is walkable then the time it takes is 90 seconds
-     * @param con - connection to test
+     *returns the shortest distance depending on the last currentTime
+     * @param index
+     * @param currentTime
+     *
      */
 
     public static int[] getShortestDistance(int index, int currentTime){
@@ -209,7 +226,19 @@ public class Metro{
      * @param a, b  two stations between which the shortest path will be found
      * @param c     the extremity station of the closed line (this parameter is used to identify the closed line)
      */
-    public static void quickestPath(int a, int b, int c){}
+    public static void quickestPath(int a, int b, int c){
+
+
+        stations[c].setDisabled(false);
+        for(Connection con: adjacencyList[c]){
+            con.setDisabled(false);
+        }
+
+        quickestPath(a,b);
+
+
+
+    }
 
 
 

@@ -54,6 +54,12 @@ public class Station{
         this.number = number;
     }
 
+    public void setDisabled(boolean disabled){this.disabled = disabled;}
+
+    public boolean getDisabled(){
+        return disabled;
+    }
+
     @Override
     public String toString(){ return number + " " + name; }
 
