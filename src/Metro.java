@@ -118,7 +118,7 @@ public class Metro{
 
         int currentTime=0;
 
-        for(Connection c : adjacencyList[b]){
+        for(Connection c : adjacencyList[startStation]){
 
             if(c.getStation2()==b && c.getStation1()==a){
                 System.out.println("connected");
@@ -190,7 +190,7 @@ public class Metro{
                 distance = con.getTraversalTime();
                 station = con.getStation2();//found shortest distance to reach the second station
 
-            }else if(con.getTraversalTime()==-1 && distance+currentTime >=90){
+            }else if(con.getTraversalTime()==-1 && distance+currentTime > 90){
                 distance = 90;
             }
 
