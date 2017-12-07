@@ -114,23 +114,43 @@ public class Metro{
         int startStation = a;
         int endStation = b;
         int[] newPosition= null;
-
+        boolean finished=false;
 
         int currentTime=0;
 
+        for(Connection c : adjacencyList[b]){
+
+            if(c.getStation2()==b && c.getStation1()==a){
+                System.out.println("connected");
+                finished=true;
+                currentTime=c.getTraversalTime();
+                if(currentTime==-1){
+                    currentTime=90;
+                }
+            }
+
+        }
+
+        if(!finished){
             for(Connection c : adjacencyList[startStation]){
 
                 stations[c.getStation1()].setExplored(true);
-                newPosition = getShortestDistance(startStation,currentTime);
+                newPosition = getShortestDistance(startStation, currentTime);
                 currentTime = newPosition[0];//iterate time
                 endStation = newPosition[1];//go to next station
-                DjList[startStation].addLast(new Connection(startStation,endStation,currentTime));
-                startStation=endStation;
+                DjList[startStation].addLast(new Connection(startStation, endStation, currentTime));
+                startStation = endStation;
 
-            }//end of second for loop
+            }
+        }
 
 
-        startStation=b;
+
+            startStation=b;
+
+            if(finished){
+                endStation=a;
+            }
 
             for (Connection c: adjacencyList[startStation]) {
                 if(c.getStation1() ==startStation && c.getStation2()==endStation){
@@ -139,8 +159,7 @@ public class Metro{
             }
 
 
-        DjList[startStation].addLast(new Connection(startStation,endStation,currentTime));
-
+            DjList[startStation].addLast(new Connection(startStation,endStation,currentTime));
 
         System.out.print(endStation);
         for (int i = 0; i < DjList.length; i++) {
@@ -165,14 +184,14 @@ public class Metro{
 
         for(Connection con : adjacencyList[index]){
 
-            if(con.getTraversalTime() < distance && con.getTraversalTime()!=-1){
+
+            if(con.getTraversalTime() < distance && con.getTraversalTime() !=-1 ){
 
                 distance = con.getTraversalTime();
                 station = con.getStation2();//found shortest distance to reach the second station
 
-            }else{
+            }else if(con.getTraversalTime()==-1 && distance+currentTime >=90){
                 distance = 90;
-                station=con.getStation2();
             }
 
         }
@@ -181,8 +200,8 @@ public class Metro{
 
         return result;
 
-
     }
+
 
     /**
      * Finds the quickest path between a and b using Dijkstra's Algorithm, considering that one line

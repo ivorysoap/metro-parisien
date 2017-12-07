@@ -60,25 +60,5 @@ public class Station{
 
 
 
-    public boolean equals(Object obj){
-        if(this==obj)
-            return true;
-        if(obj==null)
-            return false;
-        if(getClass() != obj.getClass())
-            return false;
-
-        Station other = (Station) obj;
-
-        if(number==-2){
-            if(other.number != -2){
-                return false;
-            }
-        }else if(number != other.number){
-            return false;
-        }
-
-        return true;
-    }
 
 }//End of class
